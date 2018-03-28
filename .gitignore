@@ -1,3 +1,4 @@
 .vagrant
 temp
 fabric-tools
+util/node_modules

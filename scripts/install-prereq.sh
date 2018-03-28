@@ -5,7 +5,9 @@
 echo "========================================"
 echo "Starting installation - Pre requisites"
 echo "========================================"
-curl -O https://hyperledger.github.io/composer/prereqs-ubuntu.sh
+curl -O https://hyperledger.github.io/composer/latest/prereqs-ubuntu.sh
+
+chmod u+x prereqs-ubuntu.sh
 
 chmod u+x prereqs-ubuntu.sh
 

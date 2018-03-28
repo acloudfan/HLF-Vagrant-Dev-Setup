@@ -22,6 +22,9 @@ Windows | Mac | Linux Docker
 
 Setup Vagrant Dev Environment
 =============================
+PS: If you get a permissions error, run this command
+> chmod 755 ./scripts/*.sh
+
 > Open a terminal window and cd to the root of this project
 > vagrant up
 > vagrant ssh

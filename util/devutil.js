@@ -5,7 +5,7 @@ var figlet      = require('figlet');
 var inquirer   = require('inquirer');
 var path   = require('path');
 var ncp    = require('ncp');
-const fsextra = require('fs-extra')
+const fsextra = require('fs-extra');
 
 console.log(
     chalk.yellow(figlet.textSync('ACloudFan.com', { 'horizontalLayout': 'full' })));
@@ -16,6 +16,7 @@ function    inquireAction(){
     var  INSTALL_PEER_ADMIN_CARD = 'Install Peer Admin Card';
     var  DELETE_ALL_CARDS = 'Delete all cards';
     var  LIST_CARDS = 'List cards on disk';
+    var  HELP_CLEANUP = 'Help Cleanup';
 
     var EXIT = "EXIT";
 
@@ -33,6 +34,8 @@ function    inquireAction(){
             DELETE_ALL_CARDS,
             LIST_CARDS,
             new inquirer.Separator(),
+            HELP_CLEANUP,
+            new inquirer.Separator(),
             EXIT]
         }
     ];
@@ -43,6 +46,7 @@ function    inquireAction(){
             case INSTALL_PEER_ADMIN_CARD: installPeerAdminCard(); break;
             case DELETE_ALL_CARDS: deleteAllCards(); break;
             case LIST_CARDS: listCards(); break;
+            case HELP_CLEANUP: helpCleanup(); break;
             case EXIT: process.exit(0);
         }
     });
@@ -108,4 +112,15 @@ function deleteAllCards(){
             console.log(chalk.green('Removed all cards!!'));
         })
     }
+}
+
+function helpCleanup(){
+    console.log(chalk.blue('To Cleanup VM'));
+    console.log(chalk.green('+ Change Directory to root of this project'));
+    console.log(chalk.green('> vagrant destroy'));
+    
+    console.log(chalk.blue('To Clear Vagrant Box (Linux images'));
+    console.log(chalk.green('+ Change Directory to root of this project'));
+    console.log(chalk.green('> vagrant box remove ubuntu/trusty64'));
+
 }
