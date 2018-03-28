@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
     # config.vm.box = "hashicorp/precise64"
     config.vm.box = "ubuntu/trusty64"
 
-    config.vm.synced_folder "../", "/home/vagrant/workspace"
+    config.vm.synced_folder "./", "/home/vagrant/workspace"
     config.vm.synced_folder "./scripts", "/home/vagrant/scripts"
 
     # Ports foward

@@ -11,17 +11,18 @@ Vagrant commands
 
 Windows | Mac | Linux Docker
 ============================
-+ DO NOT RUN DOCKER DAEMON
-+ Install the Docker or Docker toolbox on windows
-+ Make sure that following environment variables are REMOVED
++ DO NOT RUN DOCKER DAEMON on Host Machine
++ Install the Docker or Docker toolbox - Only docker client will be used
++ Make sure that following environment variables are NOT SET
   Use Control Panel on windows
   DOCKER_TLS
   DOCKER_TLS_VERIFY
-+ Set the Environment variable in Windows 
++ Set the Environment following variable in Windows 
   DOCKER_HOST=tcp://localhost:2376
 
-Usage
-=====
+Setup Vagrant Dev Environment
+=============================
+> Open a terminal window and cd to the root of this project
 > vagrant up
 > vagrant ssh
   $ ./scripts/install-prereqs.sh
@@ -33,6 +34,6 @@ Usage
 
 Validation
 ==========
-> set DOCKER_TLS_VERIFY=
+You should be able to use the *docker* commands on your host machine
 > set DOCKER_HOST=tcp://localhost:2376
 > docker ps     // Should not fail
