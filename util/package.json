@@ -1,0 +1,20 @@
+{
+  "name": "devutil",
+  "version": "1.0.0",
+  "description": "This is a utility of Hyper Ledger Fabric Dev Setup",
+  "main": "devutil.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "raj@acloudfan.com",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "figlet": "^1.2.0",
+    "fs": "0.0.1-security",
+    "inquirer": "^5.2.0",
+    "ncp": "^2.0.0",
+    "os": "^0.1.1",
+    "path": "^0.12.7"
+  }
+}
