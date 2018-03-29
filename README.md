@@ -20,8 +20,16 @@ Windows | Mac | Linux Docker
 + Set the Environment following variable in Windows 
   DOCKER_HOST=tcp://localhost:2376
 
-Setup Vagrant Dev Environment
-=============================
+Install Vagrant
+===============
+
+Setup Ubuntu VM (~10 minutes first time)
+========================================
++ Open a terminal window in the root of this folder
+> vagrant up
+
+Setup Vagrant Dev Environment (~5 min)
+======================================
 PS: If you get a permissions error, run this command
 > chmod 755 ./scripts/*.sh
 
@@ -35,8 +43,16 @@ PS: If you get a permissions error, run this command
   $ ./scripts/install-composer.sh
   $ ./scripts/install-fabric-tools.sh
 
+Download Fabric (~20 min)
+=========================
+Logout of Ubuntu
+> vagrant ssh
+> ./downloadFabric.sh
+
 Validation
 ==========
 You should be able to use the *docker* commands on your host machine
-> set DOCKER_HOST=tcp://localhost:2376
-> docker ps     // Should not fail
+> set DOCKER_HOST=tcp://localhost:2376   
+> unest DOCKER_TLS_VERIFY
+
+> docker images    // Should not fail
