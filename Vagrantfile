@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
 
-    # config.vm.box = "hashicorp/precise64"
+    # Ubuntu 64 bit
     config.vm.box = "ubuntu/trusty64"
 
     config.vm.synced_folder "./", "/home/vagrant/workspace"
