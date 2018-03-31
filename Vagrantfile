@@ -12,17 +12,19 @@ Vagrant.configure("2") do |config|
     # For REST Server
     config.vm.network "forwarded_port", guest: 3000, host: 3000
     # For Docker Deamon
-    config.vm.network "forwarded_port", guest: 2376, host: 2376
+    config.vm.network "forwarded_port", guest: 2376, host: 2375
     # For Orderer Container
     config.vm.network "forwarded_port", guest: 7050, host: 7050
-    # For CA Container
+    # For Peer Container
     config.vm.network "forwarded_port", guest: 7051, host: 7051
-    # For Container
+    # For Peer Container
     config.vm.network "forwarded_port", guest: 7052, host: 7052
-    # For Container
+    # For Peer Container
     config.vm.network "forwarded_port", guest: 7053, host: 7053
-    # For Container
+    # For CA Container
     config.vm.network "forwarded_port", guest: 7054, host: 7054
+    # For CouchDB Container
+    config.vm.network "forwarded_port", guest: 5984, host: 5984
 
     # FIXED IP Address => Change this if you have a conflict
     # config.vm.network "private_network", ip: "192.168.50.4"
@@ -30,8 +32,11 @@ Vagrant.configure("2") do |config|
     # This gets executed for both vm1 & vm2
     config.vm.provision "shell", inline:  "echo 'All good'"
   
+    # To use a diffrent Hypervisor create a section config.vm.provider
+    # And comment out the following section
+    # Configuration for Virtual Box
     config.vm.provider :virtualbox do |vb|
-      # Change the memory here if needed
+      # Change the memory here if needed - 2 Gb memory on Virtual Box VM
       vb.customize ["modifyvm", :id, "--memory", "2048", "--cpus", "1"]
       # Change this only if you need destop for Ubuntu - you will need more memory
       vb.gui = false
