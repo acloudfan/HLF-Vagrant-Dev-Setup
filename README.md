@@ -40,8 +40,9 @@ PS: If you get a permissions error, run this command
 // Logout of vagrant
   $ logout
 > vagrant ssh
-  $ ./scripts/install-composer.sh
   $ ./scripts/install-fabric-tools.sh
+  $ ./scripts/install-composer.sh
+  
 
 Download Fabric (~20 min)
 =========================

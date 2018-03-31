@@ -1,5 +1,5 @@
 #!/bin/bash
-# Hardcoded to hlfv1 - will need to be updated for v11 at some point :)
+# Hardcoded to hlfv1 
 echo "Development only script for Hyperledger Fabric control"
 
 start_fabric() {
