@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
     # For REST Server
     config.vm.network "forwarded_port", guest: 3000, host: 3000
     # For Docker Deamon
-    config.vm.network "forwarded_port", guest: 2376, host: 2375
+    config.vm.network "forwarded_port", guest: 2375, host: 2375
     # For Orderer Container
     config.vm.network "forwarded_port", guest: 7050, host: 7050
     # For Peer Container
