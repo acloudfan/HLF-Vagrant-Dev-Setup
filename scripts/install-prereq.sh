@@ -19,7 +19,7 @@ echo "========================================"
 
 sudo service docker stop
 
-sudo cp ./scripts/docker /etc/default/docker
+sudo cp /home/vagrant/scripts/docker /etc/default/docker
 
 sudo service docker start
 
