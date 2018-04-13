@@ -17,7 +17,7 @@ Windows | Mac | Linux Docker
   Use Control Panel on windows
   DOCKER_TLS
   DOCKER_TLS_VERIFY
-+ Set the Environment following variable in Windows 
++ Set the Environment following variable in Windows
   DOCKER_HOST=tcp://localhost:2376
 
 Install Vagrant
@@ -42,7 +42,11 @@ PS: If you get a permissions error, run this command
 > vagrant ssh
   $ ./scripts/install-fabric-tools.sh
   $ ./scripts/install-composer.sh
-  
+
+> Note: If you are using windows and you receive an illegal character \r error when attempting to install the pre-requisites, run the following script
+```
+./scripts/fix-illegal-line-endings.sh
+```
 
 Download Fabric (~20 min)
 =========================
