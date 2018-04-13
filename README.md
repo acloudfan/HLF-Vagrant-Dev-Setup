@@ -43,9 +43,9 @@ PS: If you get a permissions error, run this command
   $ ./scripts/install-fabric-tools.sh
   $ ./scripts/install-composer.sh
 
-> Note: If you are using windows and you receive an illegal character \r error when attempting to install the pre-requisites, run the following script
+> Note: If you are using windows and you receive an illegal character \r error when attempting to install the pre-requisites, run the following script:
 ```
-./scripts/fix-illegal-line-endings.sh
+./scripts/fixes/fix-illegal-line-endings.sh
 ```
 
 Download Fabric (~20 min)
