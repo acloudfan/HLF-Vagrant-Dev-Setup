@@ -1,3 +1,3 @@
 sudo apt-get install dos2unix
-sudo chmod +x ./scripts/install-prereqs.sh
-dos2unix ./scripts/install-prereqs.sh
+sudo chmod +x ./scripts/install-prereq.sh
+dos2unix ./scripts/install-prereq.sh
