@@ -17,9 +17,10 @@ echo "========================================"
 echo "Update Docker Configuration"
 echo "========================================"
 
-sudo service docker stop
+# sudo service docker stop
+#sudo cp /home/vagrant/scripts/docker /etc/default/docker
+sudo cp /home/vagrant/scripts/docker.service  /lib/systemd/system
+sudo systemctl daemon-reload
 
-sudo cp /home/vagrant/scripts/docker /etc/default/docker
-
-sudo service docker start
+sudo service docker restart
 

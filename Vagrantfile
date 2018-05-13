@@ -1,7 +1,10 @@
 Vagrant.configure("2") do |config|
 
+    # Change made - May 13th. Using a box that is available on 
+    # hyperv (Windows 10 Pro)  and   VirtualBox (Windows 10 Home)
     # Ubuntu 64 bit
-    config.vm.box = "ubuntu/trusty64"
+    # config.vm.box = "ubuntu/trusty64"
+    config.vm.box = "bento/ubuntu-16.04"
 
     config.vm.synced_folder "./", "/home/vagrant/workspace"
     config.vm.synced_folder "./scripts", "/home/vagrant/scripts"
@@ -35,6 +38,7 @@ Vagrant.configure("2") do |config|
     # To use a diffrent Hypervisor create a section config.vm.provider
     # And comment out the following section
     # Configuration for Virtual Box
+    # Note for windows 10 Pro users : change the provider to hyperv
     config.vm.provider :virtualbox do |vb|
       # Change the memory here if needed - 2 Gb memory on Virtual Box VM
       vb.customize ["modifyvm", :id, "--memory", "2048", "--cpus", "1"]
