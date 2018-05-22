@@ -65,6 +65,7 @@ function installPeerAdminCard(){
         console.log(chalk.red("No cards found!!"));
         if(!fs.existsSync(os.homedir()+"./composer")){
             fs.mkdirSync(os.homedir()+"/.composer");
+            fs.mkdirSync(os.homedir()+"/.composer"+"/cards");
         }
     }
 
