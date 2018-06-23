@@ -18,7 +18,7 @@ Windows | Mac | Linux Docker
   DOCKER_TLS
   DOCKER_TLS_VERIFY
 + Set the Environment following variable in Windows 
-  DOCKER_HOST=tcp://localhost:2376
+  DOCKER_HOST=tcp://localhost:2375
 
 Install Vagrant
 ===============
@@ -53,7 +53,7 @@ Logout of Ubuntu
 Validation
 ==========
 You should be able to use the *docker* commands on your host machine
-> set DOCKER_HOST=tcp://localhost:2376   
+> set DOCKER_HOST=tcp://localhost:2375   
 > unest DOCKER_TLS_VERIFY
 
 > docker images    // Should not fail
