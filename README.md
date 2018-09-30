@@ -1,3 +1,5 @@
+# Last Updated: September 30, 2018
+
 # Part of the course on Hyperledger Fabric
 http://www.ACloudFan.com
 https://hyperledger.github.io/composer/installing/installing-prereqs#ubuntu

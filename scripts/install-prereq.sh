@@ -5,9 +5,8 @@
 echo "========================================"
 echo "Starting installation - Pre requisites"
 echo "========================================"
-curl -O https://hyperledger.github.io/composer/latest/prereqs-ubuntu.sh
 
-chmod u+x prereqs-ubuntu.sh
+curl -O https://hyperledger.github.io/composer/latest/prereqs-ubuntu.sh
 
 chmod u+x prereqs-ubuntu.sh
 
@@ -17,10 +16,12 @@ echo "========================================"
 echo "Update Docker Configuration"
 echo "========================================"
 
-# sudo service docker stop
-#sudo cp /home/vagrant/scripts/docker /etc/default/docker
-sudo cp /home/vagrant/scripts/docker.service  /lib/systemd/system
-sudo systemctl daemon-reload
+# Updated Sep 30, 2018
+sudo ./scripts/docker.sh
 
-sudo service docker restart
+# sudo service docker stop
+# sudo cp /home/vagrant/scripts/docker /etc/default/docker
+# sudo cp /home/vagrant/scripts/docker.service  /lib/systemd/system
+# sudo systemctl daemon-reload
+# sudo service docker restart
 

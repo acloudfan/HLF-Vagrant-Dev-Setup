@@ -4,6 +4,7 @@ Vagrant.configure("2") do |config|
     # hyperv (Windows 10 Pro)  and   VirtualBox (Windows 10 Home)
     # Ubuntu 64 bit
     # config.vm.box = "ubuntu/trusty64"
+    
     config.vm.box = "bento/ubuntu-16.04"
 
     config.vm.synced_folder "./", "/home/vagrant/workspace"
