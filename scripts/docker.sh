@@ -28,3 +28,5 @@ sudo systemctl restart docker
 echo "======= Done. PLEASE LOG OUT & LOG Back In ===="
 echo "Then validate by executing    'docker ps'"
 # Restart is needed after this
+
+# https://medium.com/@sudarakayasindu/enabling-and-accessing-docker-engine-api-on-a-remote-docker-host-on-ubuntu-16-04-2c15f55f5d39
