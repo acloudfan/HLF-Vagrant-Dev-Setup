@@ -10,6 +10,10 @@ Type=notify
 # the default is not to use systemd for cgroups because the delegate issues still
 # exists and systemd currently does not support the cgroup feature set required
 # for containers run by docker
+# Some students reported that the following line causes issues and should be replaced with:
+# If you face issues in connecting to dockerd from host Try - Uncomment Line#116 & COMMENT line#17
+# Shutdown/Start the VM 
+# ExecStart=/usr/bin/dockerd -H unix:// -H tcp://0.0.0.0:2375
 ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2375
 ExecReload=/bin/kill -s HUP $MAINPID
 LimitNOFILE=1048576
