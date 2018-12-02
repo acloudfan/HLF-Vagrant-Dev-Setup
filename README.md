@@ -1,4 +1,4 @@
-# Last Updated: September 30, 2018
+# Last Updated: December 2, 2018
 
 # Part of the course on Hyperledger Fabric
 http://www.ACloudFan.com
@@ -59,3 +59,5 @@ You should be able to use the *docker* commands on your host machine
 > unest DOCKER_TLS_VERIFY
 
 > docker images    // Should not fail
+
+

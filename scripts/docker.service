@@ -11,8 +11,8 @@ Type=notify
 # exists and systemd currently does not support the cgroup feature set required
 # for containers run by docker
 #Change made 11/20/2018
-ExecStart=/usr/bin/dockerd -H unix:// -H tcp://0.0.0.0:2375
-# ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2375
+#ExecStart=/usr/bin/dockerd -H unix:// -H tcp://0.0.0.0:2375
+ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2375
 ExecReload=/bin/kill -s HUP $MAINPID
 LimitNOFILE=1048576
 # Having non-zero Limit*s causes performance problems due to accounting overhead

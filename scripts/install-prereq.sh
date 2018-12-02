@@ -16,12 +16,12 @@ echo "========================================"
 echo "Update Docker Configuration"
 echo "========================================"
 
-# Updated Sep 30, 2018
+# December 2nd 2018
+# remove the latest version 18.09.* as it has issues 
+sudo apt-get remove -y docker-ce
+
+# install docker-ce 18.03.*
 sudo ./scripts/docker.sh
 
-# sudo service docker stop
-# sudo cp /home/vagrant/scripts/docker /etc/default/docker
-# sudo cp /home/vagrant/scripts/docker.service  /lib/systemd/system
-# sudo systemctl daemon-reload
-# sudo service docker restart
+
 
