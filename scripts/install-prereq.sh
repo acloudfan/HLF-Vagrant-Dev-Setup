@@ -20,8 +20,5 @@ echo "========================================"
 # remove the latest version 18.09.* as it has issues 
 sudo apt-get remove -y docker-ce
 
-# install docker-ce 18.03.*
+# install docker-ce 18.03.*    <==
 sudo ./scripts/docker.sh
-
-
-

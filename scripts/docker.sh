@@ -15,6 +15,7 @@ install_docker() {
     usermod -aG docker $SUDO_USER
 }
 
+
 # Install docker
 install_docker
 
