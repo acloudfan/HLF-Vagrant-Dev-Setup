@@ -56,11 +56,15 @@ function    inquireAction(){
 function installPeerAdminCard(){
 
     var index = 1;
-    var composerDir = os.homedir()+"/.composer"
+    var composerDir = os.homedir()+"/.composer";
     if (fs.existsSync(composerDir)) {
-        fs.readdirSync(composerDir+'/cards').forEach(file => {
-            console.log(chalk.green("Existing card ("+index+") "+file)); index++;
-        })
+        try {
+            fs.readdirSync(composerDir+'/cards').forEach(file => {
+                console.log(chalk.green("Existing card ("+index+") "+file)); index++;
+            });
+        } catch (err) {
+            console.log("No existing cards directory within " + composerDir);
+        }
     } else {
         console.log(chalk.red("No cards found!!"));
         if(!fs.existsSync(os.homedir()+"./composer")){
